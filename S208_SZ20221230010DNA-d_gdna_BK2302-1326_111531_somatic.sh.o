@@ -1,0 +1,270 @@
+
+2023年 03月 31日 星期五 16:10:53 CST
+/haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/shell/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531_somatic.sh:行2: perl/thinker/net/ctDNA/Bed/add_geneinfo_to_bed.pl: 没有那个文件或目录
+Normal Pileup: /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/bam/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.gDNA.gencore.mpileup
+Tumor Pileup: /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/bam/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.cfDNA.gencore.mpileup
+NOTICE: While dual input files are still supported, using a single mpileup file (normal-tumor) with the --mpileup 1 setting is strongly recommended.
+Min coverage:	60x for Normal, 80x for Tumor
+Min reads2:	2
+Min strands2:	1
+Min var freq:	1.0E-4
+Min freq for hom:	0.9
+Normal purity:	1.0
+Tumor purity:	0.01
+Min avg qual:	15
+P-value thresh:	0.99
+Somatic p-value:	0.05
+4249838 positions in tumor
+4249837 positions shared in normal
+4209548 had sufficient coverage for comparison
+4158778 were called Reference
+0 were mixed SNP-indel calls and filtered
+4453 were removed by the strand filter
+10214 were called Germline
+533 were called LOH
+40023 were called Somatic
+0 were called Unknown
+0 were called Variant
+
+NOTICE: Running with system command <convert2annovar.pl -includeinfo -allsample -withfreq -format vcf4 /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.vcf > /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput>
+NOTICE: Finished reading 42222 lines from VCF file
+NOTICE: A total of 42204 locus in VCF file passed QC threshold, representing 42204 SNPs (25354 transitions and 16850 transversions) and 0 indels/substitutions
+NOTICE: Finished writing allele frequencies based on 84408 SNP genotypes (50708 transitions and 33700 transversions) and 0 indels/substitutions for 2 samples
+
+NOTICE: Running with system command </thinker/net/ctDNA/annovar/table_annovar.pl /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput /thinker/net/ctDNA/annovar/humandb/ -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp -remove -protocol refGene,cytoBand,genomicSuperDups,esp6500siv2_all,1000g2015aug_all,1000g2015aug_afr,1000g2015aug_eas,1000g2015aug_eur,snp138,ljb26_all,cosmic87,clinvar_20180603 -operation g,r,r,f,f,f,f,f,f,f,f,f -nastring . -otherinfo>
+-----------------------------------------------------------------
+NOTICE: Processing operation=g protocol=refGene
+
+NOTICE: Running with system command <annotate_variation.pl -geneanno -buildver hg19 -dbtype refGene -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.refGene -exonsort /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Reading gene annotation from /thinker/net/ctDNA/annovar/humandb/hg19_refGene.txt ... Done with 50913 transcripts (including 11515 without coding sequence annotation) for 26270 unique genes
+NOTICE: Reading FASTA sequences from /thinker/net/ctDNA/annovar/humandb/hg19_refGeneMrna.fa ... Done with 2615 sequences
+WARNING: A total of 345 sequences will be ignored due to lack of correct ORF annotation
+NOTICE: Finished gene-based annotation on 42204 genetic variants in /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput
+NOTICE: Output files were written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.refGene.variant_function, /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.refGene.exonic_variant_function
+-----------------------------------------------------------------
+NOTICE: Processing operation=r protocol=cytoBand
+
+NOTICE: Running with system command <annotate_variation.pl -regionanno -dbtype cytoBand -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Reading annotation database /thinker/net/ctDNA/annovar/humandb/hg19_cytoBand.txt ... Done with 862 regions
+NOTICE: Finished region-based annotation on 42204 genetic variants in /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput
+NOTICE: Output file is written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_cytoBand
+-----------------------------------------------------------------
+NOTICE: Processing operation=r protocol=genomicSuperDups
+
+NOTICE: Running with system command <annotate_variation.pl -regionanno -dbtype genomicSuperDups -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Reading annotation database /thinker/net/ctDNA/annovar/humandb/hg19_genomicSuperDups.txt ... Done with 51599 regions
+NOTICE: Finished region-based annotation on 42204 genetic variants in /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput
+NOTICE: Output file is written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_genomicSuperDups
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=esp6500siv2_all
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype esp6500siv2_all -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: the --dbtype esp6500siv2_all is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_esp6500siv2_all_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_esp6500siv2_all_filtered
+NOTICE: Processing next batch with 42204 unique variants in 42204 input lines
+NOTICE: Database index loaded. Total number of bins is 594771 and the number of bins to be scanned is 17108
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_esp6500siv2_all.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=1000g2015aug_all
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype 1000g2015aug_all -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_ALL.sites.2015_08_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_ALL.sites.2015_08_filtered
+NOTICE: Processing next batch with 42204 unique variants in 42204 input lines
+NOTICE: Database index loaded. Total number of bins is 2824642 and the number of bins to be scanned is 8546
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_ALL.sites.2015_08.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=1000g2015aug_afr
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype 1000g2015aug_afr -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_AFR.sites.2015_08_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_AFR.sites.2015_08_filtered
+NOTICE: Processing next batch with 42204 unique variants in 42204 input lines
+NOTICE: Database index loaded. Total number of bins is 2820101 and the number of bins to be scanned is 8546
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_AFR.sites.2015_08.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=1000g2015aug_eas
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype 1000g2015aug_eas -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_EAS.sites.2015_08_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_EAS.sites.2015_08_filtered
+NOTICE: Processing next batch with 42204 unique variants in 42204 input lines
+NOTICE: Database index loaded. Total number of bins is 2812769 and the number of bins to be scanned is 8538
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_EAS.sites.2015_08.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=1000g2015aug_eur
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype 1000g2015aug_eur -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_EUR.sites.2015_08_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_EUR.sites.2015_08_filtered
+NOTICE: Processing next batch with 42204 unique variants in 42204 input lines
+NOTICE: Database index loaded. Total number of bins is 2812033 and the number of bins to be scanned is 8532
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_EUR.sites.2015_08.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=snp138
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype snp138 -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_snp138_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_snp138_filtered
+NOTICE: Processing next batch with 42204 unique variants in 42204 input lines
+NOTICE: Database index loaded. Total number of bins is 2894320 and the number of bins to be scanned is 8546
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_snp138.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=ljb26_all
+NOTICE: Finished reading 25 column headers for '-dbtype ljb26_all'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype ljb26_all -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput /thinker/net/ctDNA/annovar/humandb/ -otherinfo>
+NOTICE: the --dbtype ljb26_all is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_ljb26_all_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_ljb26_all_filtered
+NOTICE: Processing next batch with 42204 unique variants in 42204 input lines
+NOTICE: Database index loaded. Total number of bins is 557362 and the number of bins to be scanned is 16398
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_ljb26_all.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=cosmic87
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype cosmic87 -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: the --dbtype cosmic87 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_cosmic87_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_cosmic87_filtered
+NOTICE: Processing next batch with 42204 unique variants in 42204 input lines
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_cosmic87.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=clinvar_20180603
+NOTICE: Finished reading 5 column headers for '-dbtype clinvar_20180603'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype clinvar_20180603 -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.avinput /thinker/net/ctDNA/annovar/humandb/ -otherinfo>
+NOTICE: the --dbtype clinvar_20180603 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_clinvar_20180603_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_clinvar_20180603_filtered
+NOTICE: Processing next batch with 42204 unique variants in 42204 input lines
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_clinvar_20180603.txt...Done
+-----------------------------------------------------------------
+NOTICE: Multianno output file is written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_multianno.txt
+NOTICE: Reading from /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_multianno.txt
+-----------------------------------------------------------------
+NOTICE: VCF output is written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.snp.hg19_multianno.vcf
+
+NOTICE: Running with system command <convert2annovar.pl -includeinfo -allsample -withfreq -format vcf4 /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.vcf > /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput>
+NOTICE: Finished reading 4131 lines from VCF file
+NOTICE: A total of 4113 locus in VCF file passed QC threshold, representing 0 SNPs (0 transitions and 0 transversions) and 4113 indels/substitutions
+NOTICE: Finished writing allele frequencies based on 0 SNP genotypes (0 transitions and 0 transversions) and 8226 indels/substitutions for 2 samples
+
+NOTICE: Running with system command </thinker/net/ctDNA/annovar/table_annovar.pl /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput /thinker/net/ctDNA/annovar/humandb/ -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel -remove -protocol refGene,cytoBand,genomicSuperDups,esp6500siv2_all,1000g2015aug_all,1000g2015aug_afr,1000g2015aug_eas,1000g2015aug_eur,snp138,ljb26_all,cosmic87,clinvar_20180603 -operation g,r,r,f,f,f,f,f,f,f,f,f -nastring . -otherinfo>
+-----------------------------------------------------------------
+NOTICE: Processing operation=g protocol=refGene
+
+NOTICE: Running with system command <annotate_variation.pl -geneanno -buildver hg19 -dbtype refGene -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.refGene -exonsort /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Reading gene annotation from /thinker/net/ctDNA/annovar/humandb/hg19_refGene.txt ... Done with 50913 transcripts (including 11515 without coding sequence annotation) for 26270 unique genes
+NOTICE: Reading FASTA sequences from /thinker/net/ctDNA/annovar/humandb/hg19_refGeneMrna.fa ... Done with 1228 sequences
+WARNING: A total of 345 sequences will be ignored due to lack of correct ORF annotation
+NOTICE: Finished gene-based annotation on 4113 genetic variants in /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput
+NOTICE: Output files were written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.refGene.variant_function, /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.refGene.exonic_variant_function
+-----------------------------------------------------------------
+NOTICE: Processing operation=r protocol=cytoBand
+
+NOTICE: Running with system command <annotate_variation.pl -regionanno -dbtype cytoBand -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Reading annotation database /thinker/net/ctDNA/annovar/humandb/hg19_cytoBand.txt ... Done with 862 regions
+NOTICE: Finished region-based annotation on 4113 genetic variants in /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput
+NOTICE: Output file is written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_cytoBand
+-----------------------------------------------------------------
+NOTICE: Processing operation=r protocol=genomicSuperDups
+
+NOTICE: Running with system command <annotate_variation.pl -regionanno -dbtype genomicSuperDups -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Reading annotation database /thinker/net/ctDNA/annovar/humandb/hg19_genomicSuperDups.txt ... Done with 51599 regions
+NOTICE: Finished region-based annotation on 4113 genetic variants in /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput
+NOTICE: Output file is written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_genomicSuperDups
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=esp6500siv2_all
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype esp6500siv2_all -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: the --dbtype esp6500siv2_all is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_esp6500siv2_all_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_esp6500siv2_all_filtered
+NOTICE: Processing next batch with 4113 unique variants in 4113 input lines
+NOTICE: Database index loaded. Total number of bins is 594771 and the number of bins to be scanned is 2647
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_esp6500siv2_all.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=1000g2015aug_all
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype 1000g2015aug_all -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_ALL.sites.2015_08_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_ALL.sites.2015_08_filtered
+NOTICE: Processing next batch with 4113 unique variants in 4113 input lines
+NOTICE: Database index loaded. Total number of bins is 2824642 and the number of bins to be scanned is 2964
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_ALL.sites.2015_08.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=1000g2015aug_afr
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype 1000g2015aug_afr -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_AFR.sites.2015_08_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_AFR.sites.2015_08_filtered
+NOTICE: Processing next batch with 4113 unique variants in 4113 input lines
+NOTICE: Database index loaded. Total number of bins is 2820101 and the number of bins to be scanned is 2964
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_AFR.sites.2015_08.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=1000g2015aug_eas
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype 1000g2015aug_eas -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_EAS.sites.2015_08_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_EAS.sites.2015_08_filtered
+NOTICE: Processing next batch with 4113 unique variants in 4113 input lines
+NOTICE: Database index loaded. Total number of bins is 2812769 and the number of bins to be scanned is 2960
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_EAS.sites.2015_08.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=1000g2015aug_eur
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype 1000g2015aug_eur -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_EUR.sites.2015_08_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_EUR.sites.2015_08_filtered
+NOTICE: Processing next batch with 4113 unique variants in 4113 input lines
+NOTICE: Database index loaded. Total number of bins is 2812033 and the number of bins to be scanned is 2959
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_EUR.sites.2015_08.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=snp138
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype snp138 -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_snp138_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_snp138_filtered
+NOTICE: Processing next batch with 4113 unique variants in 4113 input lines
+NOTICE: Database index loaded. Total number of bins is 2894320 and the number of bins to be scanned is 2964
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_snp138.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=ljb26_all
+NOTICE: Finished reading 25 column headers for '-dbtype ljb26_all'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype ljb26_all -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput /thinker/net/ctDNA/annovar/humandb/ -otherinfo>
+NOTICE: the --dbtype ljb26_all is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_ljb26_all_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_ljb26_all_filtered
+NOTICE: Processing next batch with 4113 unique variants in 4113 input lines
+NOTICE: Database index loaded. Total number of bins is 557362 and the number of bins to be scanned is 2417
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_ljb26_all.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=cosmic87
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype cosmic87 -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput /thinker/net/ctDNA/annovar/humandb/>
+NOTICE: the --dbtype cosmic87 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_cosmic87_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_cosmic87_filtered
+NOTICE: Processing next batch with 4113 unique variants in 4113 input lines
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_cosmic87.txt...Done
+-----------------------------------------------------------------
+NOTICE: Processing operation=f protocol=clinvar_20180603
+NOTICE: Finished reading 5 column headers for '-dbtype clinvar_20180603'
+
+NOTICE: Running system command <annotate_variation.pl -filter -dbtype clinvar_20180603 -buildver hg19 -outfile /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.avinput /thinker/net/ctDNA/annovar/humandb/ -otherinfo>
+NOTICE: the --dbtype clinvar_20180603 is assumed to be in generic ANNOVAR database format
+NOTICE: Variants matching filtering criteria are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_clinvar_20180603_dropped, other variants are written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_clinvar_20180603_filtered
+NOTICE: Processing next batch with 4113 unique variants in 4113 input lines
+NOTICE: Scanning filter database /thinker/net/ctDNA/annovar/humandb/hg19_clinvar_20180603.txt...Done
+-----------------------------------------------------------------
+NOTICE: Multianno output file is written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_multianno.txt
+NOTICE: Reading from /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_multianno.txt
+-----------------------------------------------------------------
+NOTICE: VCF output is written to /haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/somatic/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531.indel.hg19_multianno.vcf
+
+[2023-03-31 16:21:51] filter_pair_step1.pl start ... 
+
+
+[2023-03-31 16:21:52] filter_pair_step1.pl end, Total elapsed time: 1s
+
+[2023-03-31 16:21:52] filter_pair_step1.pl start ... 
+
+
+[2023-03-31 16:21:52] filter_pair_step1.pl end, Total elapsed time: 0s
+==================================================================
+successfully connected to baseline annotation database 451plus_health_baselines
+baseline 451plus_health_baselines annotation start...
+baseline 451plus_health_baselines annotation count: 518 of 1264
+==================================================================
+==================================================================
+successfully connected to baseline annotation database 451plus_health_baselines
+baseline 451plus_health_baselines annotation start...
+baseline 451plus_health_baselines annotation count: 151 of 243
+==================================================================
+rm: 无法删除"/haplox/users/chenyr/Project/1326Panel/S208_SZ20221230010DNA-d_gdna_BK2302-1326_111531/bam/*DNA.gencore.bam": 没有那个文件或目录
